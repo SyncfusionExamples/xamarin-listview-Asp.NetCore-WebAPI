@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SfListViewSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             x:Class="SfListViewSample.MainPage" Padding="10">
+    <ContentPage.BindingContext>
+        <local:OrdersViewModel x:Name="viewmodel"/>
+    </ContentPage.BindingContext>
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Text="Fetched data from REST Api" BackgroundColor="SlateBlue" FontSize="18" FontAttributes="Bold" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        <syncfusion:SfListView x:Name="listView" ItemSize="90" ItemSpacing="5" Grid.Row="1"
+                               BackgroundColor="AliceBlue" ItemsSource="{Binding Items}">
+            <syncfusion:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="#757575" Padding="5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="Order Id  " HorizontalOptions="Start" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="Customer Id  " HorizontalOptions="Start" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+                            <Label Grid.Row="2" Grid.Column="0" Text="Ship Country  " HorizontalOptions="Start" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding OrderID}" HorizontalOptions="Start" TextColor="Black" FontSize="16" WidthRequest="100"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding CustomerID}" HorizontalOptions="Start" TextColor="Black" WidthRequest="100"/>
+                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding ShipCountry}" HorizontalOptions="Start" TextColor="Black" WidthRequest="100"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
+
+    </Grid>
+</ContentPage>
