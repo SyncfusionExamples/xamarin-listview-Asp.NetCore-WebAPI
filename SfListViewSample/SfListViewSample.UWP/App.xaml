@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="SfListViewSample.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SfListViewSample.UWP"
+    RequestedTheme="Light">
+
+</Application>
