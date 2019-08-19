@@ -13,7 +13,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Text="Load data from Web Api" BackgroundColor="SlateBlue" FontSize="18" FontAttributes="Bold" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        <Label Text="Load data from web Api" BackgroundColor="SlateBlue" FontSize="18" FontAttributes="Bold" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
         <syncfusion:SfListView x:Name="listView" ItemSize="90" ItemSpacing="5" Grid.Row="1"
                                BackgroundColor="AliceBlue" ItemsSource="{Binding Items}">
             <syncfusion:SfListView.ItemTemplate>
@@ -29,8 +29,8 @@
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-                            <Label Grid.Row="0" Grid.Column="0" Text="Order Id  " HorizontalOptions="Start" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
-                            <Label Grid.Row="1" Grid.Column="0" Text="Customer Id  " HorizontalOptions="Start" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+                            <Label Grid.Row="0" Grid.Column="0" Text="Order ID  " HorizontalOptions="Start" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="Customer ID  " HorizontalOptions="Start" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
                             <Label Grid.Row="2" Grid.Column="0" Text="Ship Country  " HorizontalOptions="Start" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
 
                             <Label Grid.Row="0" Grid.Column="1" Text="{Binding OrderID}" HorizontalOptions="Start" TextColor="Black" FontSize="16" WidthRequest="100"/>
